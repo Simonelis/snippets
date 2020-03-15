@@ -24,3 +24,17 @@ Yeah, well, this did not work so well, so I just used
 https://medium.com/@zoefhall/effectively-uninstall-and-reinstall-psql-with-homebrew-on-osx-fabbc45c5d9d
 
 to reinstall everything. Also initdb did not work, it complained a lot, so I used createdb. After everything, psql command works now.
+
+go to terminal, write psql, it should work, write either
+
+\dt or 
+
+SELECT
+   *
+FROM
+   pg_catalog.pg_tables
+WHERE
+   schemaname != 'pg_catalog'
+AND schemaname != 'information_schema';
+
+and obtain all tables
