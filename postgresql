@@ -1,0 +1,18 @@
+brew update
+brew doctor
+brew install postgresql
+# The following has directory postgres2 because postgres was taken on my laptop
+initdb /usr/local/var/postgres2 -E utf8
+
+# After installing it says,
+
+Success. You can now start the database server using:
+
+pg_ctl -D /usr/local/var/postgres2 -l logfile start
+
+# lunchy is nice to start and stop postgres.	
+brew cask install lunchy
+
+==> Verifying SHA-256 checksum for Cask 'lunchy'.
+==> Installing Cask lunchy
+==> Linking Binary 'lunchy' to '/usr/local/bin/lunchy'.
