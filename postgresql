@@ -1,3 +1,5 @@
+# local postgresql server
+
 brew update
 brew doctor
 brew install postgresql
@@ -16,3 +18,9 @@ brew cask install lunchy
 ==> Verifying SHA-256 checksum for Cask 'lunchy'.
 ==> Installing Cask lunchy
 ==> Linking Binary 'lunchy' to '/usr/local/bin/lunchy'.
+
+Yeah, well, this did not work so well, so I just used
+
+https://medium.com/@zoefhall/effectively-uninstall-and-reinstall-psql-with-homebrew-on-osx-fabbc45c5d9d
+
+to reinstall everything. Also initdb did not work, it complained a lot, so I used createdb. After everything, psql command works now.
